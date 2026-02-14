@@ -1,0 +1,11 @@
+Writeup no 01 
+redal regastry , pico ctf 
+1) you need to undersnatd the clue 
+2) Download the file confidantial.pdf
+3) open terminal and run command exeftool
+4) then you see some hash now copy the hash and pest those hash in base64
+.
+.
+.
+.
+finaly you get a flag
