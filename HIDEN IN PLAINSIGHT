@@ -1,0 +1,44 @@
+HIDEN IN PLAINSIGHT
+.
+.
+.
+.
+1) Download the img.jpg 
+..
+.
+2) now use the command "exiftool" to get metadata of the image .
+.
+.
+.
+3) now you get some hash in line of "comment"
+.
+.
+.
+4) copy the hash from the metadata and pest into base64
+.
+.
+.
+.
+5) now you get "nano hash"in result 
+..
+.
+
+.
+.
+6) copy the hash and re-decode it  now you get password of the og the "flag.txt file"
+.
+.
+.
+7) now use "steghind extract -sf img.jpg" and put the password now you get flag.txt file 
+.
+.
+.
+.
+8) now use "cat flag.txt" to extract flag.txt 
+.
+..
+
+.
+.
+
+congratulation you get a flag
