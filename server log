@@ -1,0 +1,43 @@
+For this CTF activity, we have been provided a log file with many lines of scattered and repeated data. We need to find the original flag within these lines.
+
+    Open the picoCTF web terminal and use the wget command to download the file.
+
+wget https://challenge-files.picoctf.net/c_amiable_citadel/49cec6157142f24a599f4164d5b63322c2494f801390d6f22eb91b3aa592bc66/server.log
+Press enter or click to view image in full size
+Downloading server.log using wget command
+
+2. Check the current directory to see if the file has been downloaded using dir (or ls). Verify if there is a file named server.log.
+
+3. To ensure safe and efficient analysis of server.log, we first used file to confirm its actual type, stat to gather forensic metadata and timestamps, and wc -l to determine the scope (line count) for a focused investigation.
+Press enter or click to view image in full size
+
+The result of wc -l server.log shows that the file contains 2,348 lines, and this is the number of lines we will investigate to find the scattered flag.
+
+3. Let’s check the content of the file using concatenate:
+Get Jerome Lolong’s stories in your inbox
+
+Join Medium for free to get updates from this writer.
+
+cat server.log
+Press enter or click to view image in full size
+
+After reviewing the file’s content, we determined the sheer number of logs makes manual checking impractical, so we’ll use the grep command to search for potential clues.
+
+4. We will first attempt to find the flag by using the grep command to search for the known starting string, picoCTF, within the server.log file.
+
+grep “picoCTF” server.log
+
+The current search reveals the first part of the flag. To find the remaining parts, we will now change our search query from “picoCTF” to the log identifier “INFO FLAGPART”.
+
+grep “FLAGPART” server.log
+Press enter or click to view image in full size
+
+5. From the filtered results, we have successfully identified the four distinct parts of the flag. We can now combine them to reveal the final flag:
+
+PART 1: picoCTF{us3_
+PART 2: y0urlinux_
+PART 3: sk1lls_
+PART 4: cedfa5fb}
+
+Combine the flags: picoCTF{us3_y0urlinux_sk1lls_cedfa5fb}
+
